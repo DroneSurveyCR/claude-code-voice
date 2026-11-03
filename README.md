@@ -9,15 +9,28 @@ recognition runs on your own PC.
   back and forth without touching the keyboard.
 - Works in the VS Code extension and the terminal, with several windows open at once.
 
+```
+you talk  ->  Claude works  ->  Claude tells you what it did, out loud
+   ^                                          |
+   +---- mic opens by itself, you answer -----+
+```
+
 ## Install
 
 You need **Windows 10/11** and **Python 3.10+** ([python.org](https://www.python.org/downloads/),
 tick "Add python.exe to PATH").
 
-1. Download this repo (green **Code** button, then **Download ZIP**) and unzip it.
+**Easiest:** 
+1. Click the green **Code** button, then **Download ZIP**, and unzip it.
 2. Double-click **`install.cmd`**.
 3. Wait a few minutes. The first run downloads a ~250 MB speech model.
 4. Open a **new** Claude Code chat.
+
+**Or let Claude do it.** Paste this into Claude Code:
+
+> Clone https://github.com/DroneSurveyCR/claude-code-voice, read its README and install.ps1, then run the installer.
+
+(Or with git: `git clone https://github.com/DroneSurveyCR/claude-code-voice` and run `install.cmd`.)
 
 The installer backs up your Claude `settings.json` first, adds two hooks (it never removes your
 other settings), and starts the voice tool at login. Options: `install.ps1 -NoAutostart`,
